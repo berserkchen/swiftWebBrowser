@@ -21,6 +21,7 @@ class ViewController: UIViewController, UIWebViewDelegate, UITextFieldDelegate {
         let myURL = NSURL(string:"http://cnn.com")
         let request = NSURLRequest(URL: myURL!)
         webView.loadRequest(request)
+        //
         
         
     }
@@ -28,6 +29,7 @@ class ViewController: UIViewController, UIWebViewDelegate, UITextFieldDelegate {
     func webViewDidStartLoad(webView: UIWebView) {
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
     }
+    
     
     func webViewDidFinishLoad(webView: UIWebView) {
         UIApplication.sharedApplication().networkActivityIndicatorVisible = false
